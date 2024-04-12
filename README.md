@@ -1,1 +1,1 @@
-# hackathon2024-frontend
+# hackathon-2024-frontend
