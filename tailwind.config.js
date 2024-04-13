@@ -16,6 +16,14 @@ module.exports = {
       'display': ['"Roboto Condensed"'],
       'satisfy': ['"Satisfy"'],
     },
+    colors: {
+      'my-orange': '#EC9D3F',
+      'my-light-green': '#E8E54E',
+      'my-dark-green': '#7AA331',
+      'my-light-purple': '#FB9FDC',
+      'my-dark-purple': '#BB378E',
+      'my-background': '#FDF4E9',
+    },
   },
   plugins: [],
 }
