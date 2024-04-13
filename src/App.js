@@ -6,7 +6,7 @@ import Home from './Components/Home.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App font-mono font-display">
       <Router>
         <Routes>
           <Route path="/">

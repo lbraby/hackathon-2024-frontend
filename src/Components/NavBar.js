@@ -1,14 +1,29 @@
 import { Link } from 'react-router-dom';
+import logo from '../logo.png';
 
 const NavBar = () => {
   return(
-    <div className="w-full h-16 bg-red-100 flex flex-row justify-between px-20">
-      <div className="w-1/4 flex border-green-800 border-dashed border-2"> 
-        <p className='text-green-900'><Link to="/">lol i go home</Link></p>
+    <div className="w-full h-20 bg-[#FDF4E9] flex flex-row justify-between px-8 border-b-2 border-gray-300">
+      <div className="w-1/4 flex justify-start items-center"> 
+        <p className='pr-4'>
+          <Link to="/"> 
+            <img src={logo} alt='logo' className="max-w-14"/> 
+          </Link>
+        </p>
+        <div className="px-4 text-xl font-bold text-[#BB378E]">
+          <Link to="/">
+            On your menu
+          </Link>
+        </div>
+        <div className="px-4 text-xl font-bold text-[#BB378E]">
+          <Link to="/">
+            About Us
+          </Link>
+        </div>
       </div>
-      <div className="w-1/4 flex justify-around border-green-800 border-dashed border-2"> 
-        <p className='text-blue-900'><Link to="/login">Login</Link></p>
-        <p className='text-blue-900'><Link to="/register">Register</Link></p>
+      <div className="w-1/4 flex justify-end items-center"> 
+        <p className='text-[#BB378E] mx-2 font-bold'><Link to="/login">Login</Link></p>
+        <p className='text-white bg-[#EC9D3F] font-bold rounded-md px-4 py-2 mx-2'><Link to="/register">Register</Link></p>
       </div> 
     </div>
   );
