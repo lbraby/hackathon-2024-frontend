@@ -1,9 +1,9 @@
 import NavBar from "./NavBar";
 const Home = () => {
     return(
-        <div className="bg-red-500 min-h-screen w-full">
+        <div className="bg-[#FDF4E9] min-h-screen w-full">
             <NavBar/>
-            <div>
+            <div className="text-3xl">
                 hello world!
             </div>
         </div>
