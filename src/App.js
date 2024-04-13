@@ -4,10 +4,13 @@ import DefaultRoute from './Components/DefaultRoute';
 import RouteA from './Components/RouteA';
 import RouteB from './Components/RouteB';
 import NestedRoute from './Components/NestedRoute';
+import NavBar from './Components/NavBar.js';
 
 function App() {
   return (
     <div className="App">
+      <NavBar>
+      </NavBar>
       <Router>
         <Routes>
           <Route path="/">
