@@ -1,63 +1,69 @@
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 import FlavorProfile from "./FlavorProfile";
-// import { useState } from "react";
+
 const Register = () => {
-    // const [dishes, setDishes] = useState([]);
     return(
-        <div className="w-full min-h-screen bg-blue-500">
+        <div className="w-full min-h-screen">
             <NavBar/>
-            <div className="w-full bg-green-500 flex flex-row justify-center">
-                <form className="w-1/2 bg-red-500 border-blue-500 border-2">
-                    <p>First Name</p>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="first-name-input"
-                        name="firstName"
-                        required
-                    />
-                    <p>Last Name</p>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="last-name-input"
-                        name="lastName"
-                        required
-                    />
-                    <p>Email Address</p>
-                    <input
-                        type="text"
-                        className="form-control"
-                        id="email"
-                        name="email"
-                        required
-                    />
-                    <p>Password</p>
-                    <input
-                        type="password"
-                        className="form-control"
-                        id="password"
-                        name="password"
-                        min="0"
-                        required
-                    />
-                    <p>ReType-Password</p>
-                    <input
-                        type="password"
-                        className="form-control"
-                        id="password"
-                        name="password"
-                        min="0"
-                        required
-                    />
-                    <FlavorProfile/>
-                    <div className="form-group">
-                        <button className="btn btn-primary bg-green-500">
-                            Submit
-                        </button>
+            <div className="w-full mb-16">
+                <form>
+                    <div className="flex flex-row w-2/3 mx-auto">
+                        <div className="w-1/2">
+                            <h1 className="text-my-dark-purple text-3xl font-bold mt-4">Personal Information</h1>
+                            <p className="text-my-dark-purple">First Name</p>
+                            <input
+                                type="text"
+                                className="rounded-lg my-2"
+                                id="first-name-input"
+                                name="firstName"
+                                required
+                            />
+                            <p className="text-my-dark-purple">Last Name</p>
+                            <input
+                                type="text"
+                                className="rounded-lg my-2"
+                                id="last-name-input"
+                                name="lastName"
+                                required
+                            />
+                            <p className="text-my-dark-purple">Email Address</p>
+                            <input
+                                type="text"
+                                className="rounded-lg my-2"
+                                id="email"
+                                name="email"
+                                required
+                            />
+                            <p className="text-my-dark-purple">Password</p>
+                            <input
+                                type="password"
+                                className="rounded-lg my-2"
+                                required
+                            />
+                            <p className="text-my-dark-purple">ReType-Password</p>
+                            <input
+                                type="password"
+                                className="rounded-lg my-2"
+                                required
+                            />
+                        </div>
+                        <div className="w-1/2">
+                            <h1 className="text-my-dark-purple text-3xl font-bold mt-4">Food Preferences</h1>
+                            <p className="text-my-dark-purple my-2">Add Your Favorite Dishes!</p>
+                            <FlavorProfile/>
+                            <p className="text-my-dark-purple my-2">Add Your Favorite Ingredients!</p>
+                            <FlavorProfile/>
+                            <p className="text-my-dark-purple my-2">Add Dietary Restrictions/Exclusions</p>
+                            <FlavorProfile/>
+                        </div>
+                    </div>
+                    <div className="form-group mt-2">
+                        <p className='text-white bg-[#EC9D3F] font-bold rounded-md py-2 w-2/12 mx-auto'>Sign Up!</p>
                     </div>
                 </form> 
             </div>
+            <Footer />
         </div>
     );
 };
