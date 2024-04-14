@@ -21,7 +21,7 @@ const Home = () => {
         return () => clearInterval(intervalId);
     }, [text, index]);
 
-    const [dishes, setDishes] = useState([
+    const [dishes] = useState([
     {
     "cuisine_type": "Lebanese",
     "description": "Esfiha is a Brazilian savory pie. It is brought to Brazil by  Lebanese immigrants.",
@@ -413,7 +413,7 @@ const Home = () => {
 
     return(
         <div className="bg-[#FDF4E9] min-h-screen w-full">
-            <NavBar/>
+            <NavBar />
             <div className="w-full flex justify-center items-center">
                 <img src={textlogo} alt="Welcome Logo" className="max-h-128"/>
             </div> 
