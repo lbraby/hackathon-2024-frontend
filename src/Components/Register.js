@@ -1,6 +1,7 @@
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import FlavorProfile from "./FlavorProfile";
+import { Link } from "react-router-dom";
 
 const Register = () => {
     return(
@@ -59,7 +60,11 @@ const Register = () => {
                         </div>
                     </div>
                     <div className="form-group mt-2">
-                        <p className='text-white bg-[#EC9D3F] font-bold rounded-md py-2 w-2/12 mx-auto'>Sign Up!</p>
+                        <p className='text-white bg-[#EC9D3F] font-bold rounded-md py-2 w-2/12 mx-auto'>
+                            <Link to="/OnYourMenu">
+                                Sign Up!
+                            </Link>
+                        </p>
                     </div>
                 </form> 
             </div>

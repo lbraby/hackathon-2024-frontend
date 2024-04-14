@@ -8,13 +8,13 @@ const FlavorProfile = ({ type }) => {
 
     useEffect(() => {
         if (type === 0) {
-            fetch(`http://10.0.0.250:8000/dishes/search/${myValue.replace(/\s/g, "_")}/5`)
+            fetch(`http://localhost:8000/dishes/search/${myValue.replace(/\s/g, "_")}/5`)
                 .then(response => response.json())
                 .then(data => {
                     setSuggestions(data)
                 })
         } else {
-            fetch(`http://10.0.0.250:8000/ingredients/search/${myValue.replace(/\s/g, "_")}/5`)
+            fetch(`http://localhost:8000/ingredients/search/${myValue.replace(/\s/g, "_")}/5`)
                 .then(response => response.json())
                 .then(data => {
                     setSuggestions(data)
