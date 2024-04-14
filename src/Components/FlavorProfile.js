@@ -1,27 +1,35 @@
 import { useEffect, useState } from "react";
 import SelectedFood from "./SelectedFood";
 import Autosuggest from "react-autosuggest";
-const FlavorProfile = () => {
+const FlavorProfile = ({ type }) => {
     const [suggestions, setSuggestions] = useState([]);
-    const [myDishes, setMyDishes] = useState([]);
+    const [myChoices, setMyChoices] = useState([]);
     const [myValue, setMyValue] = useState("");
 
     useEffect(() => {
-        fetch(`http://10.0.0.250:8000/dishes/search/${myValue.replace(/\s/g, "_")}/5`)
-            .then(response => response.json())
-            .then(data => {
-                setSuggestions(data)
-            })
-    }, [myValue]);
+        if (type === 0) {
+            fetch(`http://10.0.0.250:8000/dishes/search/${myValue.replace(/\s/g, "_")}/5`)
+                .then(response => response.json())
+                .then(data => {
+                    setSuggestions(data)
+                })
+        } else {
+            fetch(`http://10.0.0.250:8000/ingredients/search/${myValue.replace(/\s/g, "_")}/5`)
+                .then(response => response.json())
+                .then(data => {
+                    setSuggestions(data)
+                })
+        }
+    }, [myValue, type]);
 
-    const updateMyDishes = (input) => {
+    const updateMyChoices = (input) => {
         if (Object.keys(input).length !== 0) {
-            setMyDishes([...myDishes, input]);
+            setMyChoices([...myChoices, input]);
         }
     };
 
     const removeDish = (id) => {
-        setMyDishes(myDishes.filter(dish => dish.id !== id));
+        setMyChoices(myChoices.filter(dish => dish.id !== id));
     };
 
     const handleClick = (suggestion) => {
@@ -30,7 +38,7 @@ const FlavorProfile = () => {
 
     // autosuggest functions
     const renderSuggestion = suggestion => (
-        <div key={suggestion.id} onClick={() => updateMyDishes(suggestion)} className="text-my-dark-green">
+        <div key={suggestion.id} onClick={() => updateMyChoices(suggestion)} className="text-my-dark-green">
           {suggestion.name}
         </div>
     );
@@ -60,9 +68,9 @@ const FlavorProfile = () => {
                 />
             </div>
             <div className="overflow-scroll flex flex-col max-h-24 no-scrollbar">
-                {myDishes.map((item, index) => {
+                {myChoices.map((item, index) => {
                     return (
-                        <SelectedFood key={index} id={index} item={item} removeDish={removeDish}/>
+                        <SelectedFood type={type} key={index} id={index} item={item} removeDish={removeDish}/>
                     );
                 })}
             </div>
