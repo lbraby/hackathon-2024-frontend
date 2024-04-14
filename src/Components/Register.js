@@ -51,11 +51,11 @@ const Register = () => {
                         <div className="w-1/2">
                             <h1 className="text-my-dark-purple text-3xl font-bold mt-4">Food Preferences</h1>
                             <p className="text-my-dark-purple my-2">Add Your Favorite Dishes!</p>
-                            <FlavorProfile/>
+                            <FlavorProfile type={0}/>
                             <p className="text-my-dark-purple my-2">Add Your Favorite Ingredients!</p>
-                            <FlavorProfile/>
+                            <FlavorProfile type={1}/>
                             <p className="text-my-dark-purple my-2">Add Dietary Restrictions/Exclusions</p>
-                            <FlavorProfile/>
+                            <FlavorProfile type={1}/>
                         </div>
                     </div>
                     <div className="form-group mt-2">
