@@ -450,7 +450,6 @@ Lebanese cuisine is a mix of Mediterranean, middle eastern, and French cuisines,
                 <div className="overflow-x-scroll no-scrollbar">
                     <div className="flex flex-row w-fit text-white">
                         {dishes.map((item, index) => {
-                            console.log(item.description);
                             return (
                                 <FoodPanel key={index} id={index} name={item.name} description={item.description} img={item.image_url} uri={item.uri} />
                             );
