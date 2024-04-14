@@ -1,16 +1,3 @@
-# IMPORTANT: DJ's Notes which are very important and you should definelty read them
-
-After cloning the repo, run the command `npm i`. This should install all necessary depedencies.
-When you want to open the app, run `npm start`.
-
-## React Router
-
-I added React Router, which allows you to navigate the pages with urls. There are a few comments in `App.js` explaining how to use it.
-
-## Tailwind
-
-I also installed Tailwind, which will make our components, like, waaay cuter. You can find a few examples in `RouteA.js` and `DefaultRoute.js`
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

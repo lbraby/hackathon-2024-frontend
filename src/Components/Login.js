@@ -5,7 +5,7 @@ const Login = () => {
     return(
         <div className="bg-my-background w-full min-h-screen">
             <NavBar/>
-            <div className="flex flex-col items-center justify-center w-full h-80">
+            <div className="flex flex-col items-center justify-center w-full h-144">
                 <form>
                     <p className="text-my-dark-purple">Email</p>
                     <input

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import NavBar from './NavBar';
+import NavBar from './NavBarMenu';
 import Footer from './Footer';
 import YourMenu from  '../your_menu.json';
 import FoodRecs from  './FoodRecs';

@@ -7,7 +7,7 @@ const Register = () => {
     return(
         <div className="w-full min-h-screen">
             <NavBar/>
-            <div className="w-full mb-16">
+            <div className="w-full h-128 mb-16">
                 <form>
                     <div className="flex flex-row w-2/3 mx-auto">
                         <div className="w-1/2">
