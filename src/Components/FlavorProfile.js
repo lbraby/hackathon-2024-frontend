@@ -3,23 +3,8 @@ import SelectedFood from "./SelectedFood";
 import Autosuggest from "react-autosuggest";
 const FlavorProfile = () => {
     const [suggestions, setSuggestions] = useState([]);
-    const [myDishes, setMyDishes] = useState([
-        {
-            id: 0,
-            title: "dish1",
-            territory: "USA babyyyy"
-        },
-        {
-            id: 1,
-            title: "dish2",
-            territory: "USA babyyyy"
-        },
-        {
-            id: 2,
-            title: "dish3",
-            territory: "USA babyyyy"
-        }
-    ]);
+    const [newDish, setNewDish] = useState({});
+    const [myDishes, setMyDishes] = useState([]);
     const [myValue, setMyValue] = useState("");
 
     useEffect(() => {
@@ -40,9 +25,14 @@ const FlavorProfile = () => {
                 territory: "USA babyyyy"
             }
         ];
-        console.log(dishes.filter(dish => dish.title.includes(myValue)));
         setSuggestions(dishes.filter(dish => dish.title.includes(myValue)));
     }, [myValue]);
+
+    useEffect(() => {
+        if (Object.keys(newDish).length !== 0) {
+            setMyDishes([...myDishes, newDish]);
+        }
+    }, [newDish]);
 
     const removeDish = (id) => {
         setMyDishes(myDishes.filter(dish => dish.id !== id));
@@ -54,14 +44,17 @@ const FlavorProfile = () => {
 
     // autosuggest functions
     const renderSuggestion = suggestion => (
-        <div key={suggestion.id}>
+        <div key={suggestion.id} onClick={() => setNewDish(suggestion)}>
           {suggestion.title}
         </div>
     );
-    // works when typing, breaks when clicking. Clicking passes different value
+ 
     const onChangeSuggestion = (e) => {
-        console.log(`onChange: ${e.target.value}`)
         setMyValue(e.target.value);
+        if(e.type === "click") {
+            setMyValue("");
+        }
+
     }
 
     return(
@@ -85,7 +78,6 @@ const FlavorProfile = () => {
                     <SelectedFood key={index} id={index} item={item} removeDish={removeDish}/>
                 );
             })}
-            <button className="border-green-500 border-2 w-8 m-2" onClick={() => setMyDishes(myDishes.concat({id: 3, title: "dish4", territory: "canada (eww)"}))}>+</button>
         </div>
     );
 };
