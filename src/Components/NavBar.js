@@ -22,8 +22,8 @@ const NavBar = () => {
         </div>
       </div>
       <div className="w-1/4 flex justify-end items-center"> 
-        <p className='text-[#BB378E] mx-2 font-bold'><Link to="/login">Login</Link></p>
-        <p className='text-white bg-[#EC9D3F] font-bold rounded-md px-4 py-2 mx-2'><Link to="/register">Register</Link></p>
+        <p className='text-[#BB378E] font-bold'><Link to="/login" className='bg-transparent rounded-md px-4 py-2 mx-2'>Login</Link></p>
+        <p><Link to="/register" className='text-white bg-[#EC9D3F] font-bold rounded-md px-4 py-2 mx-2'>Register</Link></p>
       </div> 
     </div>
   );
