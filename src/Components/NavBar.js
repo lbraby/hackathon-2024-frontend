@@ -3,7 +3,7 @@ import logo from '../logo.png';
 
 const NavBar = () => {
   return(
-    <div className="w-full h-20 bg-[#FDF4E9] flex flex-row justify-between px-8 border-b-2 border-gray-300">
+    <div className="w-full h-20 bg-[#FDF4E9] flex flex-row justify-between px-8 border-b-2 border-gray-300 sticky top-0">
       <div className="w-1/4 flex justify-start items-center"> 
         <p className='pr-4'>
           <Link to="/"> 
