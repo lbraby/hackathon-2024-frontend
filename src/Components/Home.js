@@ -3,6 +3,7 @@ import NavBar from "./NavBar";
 import textlogo from "../textlogo.png";
 import { Link } from 'react-router-dom';
 import FoodPanel from "./FoodPanel";
+import Footer from "./Footer";
 // import food from "../food.jpg";
 
 const Home = () => {
@@ -458,6 +459,7 @@ Lebanese cuisine is a mix of Mediterranean, middle eastern, and French cuisines,
                 </div>
             </div>
 
+            <Footer />
         </div>
     );
 };
