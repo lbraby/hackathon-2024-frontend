@@ -30,7 +30,7 @@ const FlavorProfile = () => {
 
     // autosuggest functions
     const renderSuggestion = suggestion => (
-        <div key={suggestion.id} onClick={() => updateMyDishes(suggestion)}>
+        <div key={suggestion.id} onClick={() => updateMyDishes(suggestion)} className="text-my-dark-green">
           {suggestion.name}
         </div>
     );
@@ -45,7 +45,7 @@ const FlavorProfile = () => {
 
     return(
         <div>
-            <div className="mt-2">
+            <div className="rounded-lg">
                 <Autosuggest
                     suggestions={suggestions}
                     getSuggestionValue={handleClick}
@@ -55,15 +55,17 @@ const FlavorProfile = () => {
                     inputProps={{
                         value: myValue,
                         onChange: onChangeSuggestion,
-                        placeholder: "type a dish..."
+                        placeholder: ""
                     }}
                 />
             </div>
-            {myDishes.map((item, index) => {
-                return (
-                    <SelectedFood key={index} id={index} item={item} removeDish={removeDish}/>
-                );
-            })}
+            <div className="overflow-scroll flex flex-col max-h-24 no-scrollbar">
+                {myDishes.map((item, index) => {
+                    return (
+                        <SelectedFood key={index} id={index} item={item} removeDish={removeDish}/>
+                    );
+                })}
+            </div>
         </div>
     );
 };
