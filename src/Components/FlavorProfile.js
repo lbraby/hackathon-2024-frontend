@@ -1,36 +1,69 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SelectedFood from "./SelectedFood";
+import Autosuggest from "react-autosuggest";
 const FlavorProfile = () => {
-    const [myDishes, setMyDishes] = useState([
-        {
-            id: 0,
-            title: "dish1",
-            territory: "USA babyyyy"
-        },
-        {
-            id: 1,
-            title: "dish2",
-            territory: "USA babyyyy"
-        },
-        {
-            id: 2,
-            title: "dish3",
-            territory: "USA babyyyy"
+    const [suggestions, setSuggestions] = useState([]);
+    const [myDishes, setMyDishes] = useState([]);
+    const [myValue, setMyValue] = useState("");
+
+    useEffect(() => {
+        fetch(`http://10.0.0.250:8000/dishes/search/${myValue.replace(/\s/g, "_")}/5`)
+            .then(response => response.json())
+            .then(data => {
+                setSuggestions(data)
+            })
+    }, [myValue]);
+
+    const updateMyDishes = (input) => {
+        if (Object.keys(input).length !== 0) {
+            setMyDishes([...myDishes, input]);
         }
-    ]);
+    };
 
     const removeDish = (id) => {
         setMyDishes(myDishes.filter(dish => dish.id !== id));
     };
 
+    const handleClick = (suggestion) => {
+        return(suggestion.title);
+    }
+
+    // autosuggest functions
+    const renderSuggestion = suggestion => (
+        <div key={suggestion.id} onClick={() => updateMyDishes(suggestion)}>
+          {suggestion.name}
+        </div>
+    );
+ 
+    const onChangeSuggestion = (e) => {
+        setMyValue(e.target.value);
+        if(e.type === "click") {
+            setMyValue("");
+        }
+
+    }
+
     return(
         <div>
+            <div className="mt-2">
+                <Autosuggest
+                    suggestions={suggestions}
+                    getSuggestionValue={handleClick}
+                    renderSuggestion={renderSuggestion}
+                    onSuggestionsFetchRequested={() => {}}
+                    onSuggestionsClearRequested={() => {}}
+                    inputProps={{
+                        value: myValue,
+                        onChange: onChangeSuggestion,
+                        placeholder: "type a dish..."
+                    }}
+                />
+            </div>
             {myDishes.map((item, index) => {
                 return (
                     <SelectedFood key={index} id={index} item={item} removeDish={removeDish}/>
                 );
             })}
-            <button className="border-green-500 border-2 w-8 m-2" onClick={() => setMyDishes(myDishes.concat({id: 3, title: "dish4", territory: "canada (eww)"}))}>+</button>
         </div>
     );
 };
