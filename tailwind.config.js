@@ -10,6 +10,10 @@ module.exports = {
       },
       backgroundImage: {
         'lebanon-food': "url('../public/food.jpg')",
+        'plate': "url('./plate.png')",
+        'table': "url('./table.jpg')",
+        'checkered': "url('./checkered.jpg')",
+        'menu-header': "url('./menu_header.png')",
       },
       colors: {
         'my-orange': '#EC9D3F',

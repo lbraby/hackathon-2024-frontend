@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Login from './Components/Login.js';
 import Register from './Components/Register.js';
+import OnYourMenu from './Components/OnYourMenu.js';
 import Home from './Components/Home.js';
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
             <Route index element={<Home/>}/>
             <Route path="/login" element={<Login/>} />
             <Route path="/register" element={<Register/>} />
+            <Route path="/OnYourMenu" element={<OnYourMenu/>} />
           </Route>
           <Route
             path="*"

@@ -1,0 +1,140 @@
+[
+  {
+    "cuisine_type": "Lebanese",
+    "description": "It is often considered the country's national dish.Green soup prepared in various styles, wherein the mallow leaves are very finely chopped, with ingredients such as garlic and coriander added for a characteristic aromatic taste, then cooked with chicken broth.",
+    "id": 3767,
+    "image_url": "https://wfg32p.s3.amazonaws.com/media/dishes/mulukhiyah_2078.jpg",
+    "ingredients": [
+      {
+        "id": 3230,
+        "name": "okra leaves"
+      },
+      {
+        "id": 3230,
+        "name": "cardamom"
+      },
+      {
+        "id": 3230,
+        "name": "salt"
+      },
+      {
+        "id": 3230,
+        "name": "pepper"
+      },
+      {
+        "id": 3230,
+        "name": "onions"
+      },
+      {
+        "id": 3230,
+        "name": "beef"
+      },
+      {
+        "id": 438,
+        "name": "beef stock"
+      }
+    ],
+    "name": "Mulukhiyah",
+    "uri": "https://worldfood.guide/dish/mulukhiyah"
+  },
+  {
+    "cuisine_type": "Lebanese",
+    "description": "This is a pizza-like dish originating from the Levant. In contrast to the modern use of lamb or beef, traditional sfiha are open-faced meat pies made with ground mutton. https://en.wikipedia.org/wiki/Sfiha",
+    "id": 5025,
+    "image_url": "https://wfg32p.s3.amazonaws.com/media/dishes/sfiha_1503.jpg",
+    "ingredients": [
+      {
+        "id": 3316,
+        "name": "mutton"
+      },
+      {
+        "id": 3316,
+        "name": "cinnamon"
+      },
+      {
+        "id": 3316,
+        "name": "salt"
+      },
+      {
+        "id": 3316,
+        "name": "onions"
+      },
+      {
+        "id": 3316,
+        "name": "chili"
+      },
+      {
+        "id": 3316,
+        "name": "brown sugar"
+      },
+      {
+        "id": 3316,
+        "name": "pepper"
+      },
+      {
+        "id": 3316,
+        "name": "tomatoes"
+      }
+    ],
+    "name": "Sfiha",
+    "uri": "https://worldfood.guide/dish/sfiha"
+  },
+  {
+    "cuisine_type": "Lebanese",
+    "description": "Shawarma is a dish in Middle Eastern cuisine consisting of meat cut into thin slices, stacked in a cone-like shape, and roasted on a slowly-turning vertical rotisserie or spit. Originally made of lamb or mutton, today's shawarma may also be chicken, turkey, beef, or veal. Wikipedia",
+    "id": 5059,
+    "image_url": "https://wfg32p.s3.amazonaws.com/media/dishes/shawarma_6215-med.jpg",
+    "ingredients": [
+      {
+        "id": 2880,
+        "name": "lamb"
+      },
+      {
+        "id": 3316,
+        "name": "mutton"
+      },
+      {
+        "id": 3257,
+        "name": "veal"
+      },
+      {
+        "id": 56,
+        "name": "beef"
+      },
+      {
+        "id": 2685,
+        "name": "chicken"
+      },
+      {
+        "id": 1247,
+        "name": "turkey"
+      },
+      {
+        "id": 1974,
+        "name": "cumin"
+      },
+      {
+        "id": 1703,
+        "name": "cardamom"
+      },
+      {
+        "id": 1125,
+        "name": "cinnamon"
+      },
+      {
+        "id": 3570,
+        "name": "turmeric"
+      },
+      {
+        "id": 1787,
+        "name": "paprika"
+      },
+      {
+        "id": 2375,
+        "name": "baharat"
+      }
+    ],
+    "name": "Shawarma",
+    "uri": "https://worldfood.guide/dish/shawarma"
+  }
+]

@@ -11,7 +11,7 @@ const NavBar = () => {
           </Link>
         </p>
         <div className="px-4 text-xl font-bold text-[#BB378E]">
-          <Link to="/">
+          <Link to="/OnYourMenu">
             On Your Menu
           </Link>
         </div>

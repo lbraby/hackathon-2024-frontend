@@ -12,10 +12,10 @@ const Footer = () => {
           <img src="https://cdn-icons-png.flaticon.com/128/149/149441.png" loading="lazy" className="h-8 invert" alt="location icon"/>
           <div className="flex flex-col items-start px-4"> 
             <div>
-              444 South Beat Ave,
+              444 South Beet Ave,
             </div>
             <div>
-              Shrute, CA
+              Schrute, CA
             </div>
           </div>
         </div>
