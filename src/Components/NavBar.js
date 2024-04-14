@@ -12,7 +12,7 @@ const NavBar = () => {
         </p>
         <div className="px-4 text-xl font-bold text-[#BB378E]">
           <Link to="/">
-            On your menu
+            On Your Menu
           </Link>
         </div>
         <div className="px-4 text-xl font-bold text-[#BB378E]">
