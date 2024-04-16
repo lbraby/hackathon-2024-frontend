@@ -7,15 +7,15 @@ const Register = () => {
     return(
         <div className="w-full min-h-screen">
             <NavBar/>
-            <div className="w-full h-128 mb-16">
-                <form>
+            <div className="w-full min-h-144 mb-16 flex flex-col justify-center items-center">
+                <form className="mt-16 pt-8 pb-16 bg-[#ffca57] w-7/12 rounded-xl">
                     <div className="flex flex-row w-2/3 mx-auto">
                         <div className="w-1/2">
                             <h1 className="text-my-dark-purple text-3xl font-bold mt-4">Personal Information</h1>
                             <p className="text-my-dark-purple">First Name</p>
                             <input
                                 type="text"
-                                className="rounded-lg my-2"
+                                className="rounded-lg my-2 "
                                 id="first-name-input"
                                 name="firstName"
                                 required
@@ -34,6 +34,14 @@ const Register = () => {
                                 className="rounded-lg my-2"
                                 id="email"
                                 name="email"
+                                required
+                            />
+                            <p className="text-my-dark-purple">Zip Code</p>
+                            <input
+                                type="text"
+                                className="rounded-lg my-2"
+                                id="zipcode"
+                                name="zipcode"
                                 required
                             />
                             <p className="text-my-dark-purple">Password</p>
